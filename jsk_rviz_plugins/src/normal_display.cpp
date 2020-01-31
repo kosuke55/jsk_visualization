@@ -142,6 +142,8 @@ namespace jsk_rviz_plugins
 
   void NormalDisplay::processMessage( const sensor_msgs::PointCloud2::ConstPtr& msg )
   {
+    visuals_.clear();
+
     //check x,y,z
     int32_t xi = findChannelIndex(msg, "x");
     int32_t yi = findChannelIndex(msg, "y");
